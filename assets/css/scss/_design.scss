@@ -18,11 +18,24 @@
     }
     // section 01 
     > .main {
+        position: relative;
         background: url("../img/main_bg.png") no-repeat;
         background-size: cover;
         background-position: center;
         background-attachment: fixed;
         height: 1270px;
+        .shadow {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 100px;
+            z-index: 30;
+            background: linear-gradient(to top, rgba(0,0,0,0.3), transparent);
+        }
+        .opacity {
+            opacity: 0;
+        }
         > .wrap {
             // text 
             .main_text {
@@ -126,6 +139,15 @@
 
                         }
                     }
+                    // &:nth-child(1){
+                    //     transform: translateY(125px);
+                    // }
+                    // &:nth-child(2){
+                    //     transform: translateY(125px);
+                    // }
+                    // &:nth-child(3){
+                    //     transform: translateY(-125px);
+                    // }
                 }
             }
         }

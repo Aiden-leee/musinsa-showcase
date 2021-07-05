@@ -87,11 +87,27 @@ strong {
 }
 
 .showcase > .main {
+  position: relative;
   background: url("../img/main_bg.png") no-repeat;
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
   height: 1270px;
+}
+
+.showcase > .main .shadow {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  z-index: 30;
+  background: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.3)), to(transparent));
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.3), transparent);
+}
+
+.showcase > .main .opacity {
+  opacity: 0;
 }
 
 .showcase > .main > .wrap .main_text .m_text01 {
