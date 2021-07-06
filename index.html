@@ -29,21 +29,62 @@
                         data-speed="0.1">
                 </div>
                 <div class="main_img">
-                    <img src="./assets/img/main_img1_1.png" alt="converse img1" class='m_img01_1 translate'
+                    <img src="./assets/img/main_img1_1.png" alt="converse img1" class='m_img01_1 translate rollingImg'
                         data-speed="-0.1">
-                    <img src="./assets/img/main_img1_2.png" alt="converse img2" class='m_img01_2 translate'
+                    <img src="./assets/img/main_img1_2.png" alt="converse img2" class='m_img01_2 translate rollingImg'
                         data-speed="-0.3">
-                    <img src="./assets/img/main_img1_3.png" alt="converse img3" class='m_img01_3 translate'
+                    <img src="./assets/img/main_img1_3.png" alt="converse img3" class='m_img01_3 translate rollingImg'
                         data-speed="-0.1">
-                    <img src="./assets/img/main_img1_4.png" alt="converse img4" class='m_img01_4 translate'
+                    <img src="./assets/img/main_img1_4.png" alt="converse img4" class='m_img01_4 translate rollingImg'
                         data-speed="-0.5">
-                    <img src="./assets/img/main_img1_5.png" alt="converse img5" class='m_img01_5 translate'
+                    <img src="./assets/img/main_img1_5.png" alt="converse img5" class='m_img01_5 translate rollingImg'
                         data-speed="-0.2">
-                    <img src="./assets/img/main_img1_6.png" alt="converse img6" class='m_img01_6 translate'
+                    <img src="./assets/img/main_img1_6.png" alt="converse img6" class='m_img01_6 translate rollingImg'
                         data-speed="-0.3">
-                    <img src="./assets/img/main_img1_7.png" alt="converse img7" class='m_img01_7 translate'
+                    <img src="./assets/img/main_img1_7.png" alt="converse img7" class='m_img01_7 translate rollingImg'
                         data-speed="-0.3">
                 </div>
+                <script>
+                    // 이미지 rolling 목록
+                    let rollingImgs = [
+                        {
+                            list: [
+                                "main_img1_1.png",
+                                "main_img1_2.png",
+                                "main_img1_3.png",
+                                "main_img1_4.png",
+                                "main_img1_5.png",
+                                "main_img1_6.png",
+                                "main_img1_7.png"
+                            ]
+                        },
+                        {
+                            list: [
+                                "main_img2_1.png",
+                                "main_img2_2.png",
+                                "main_img2_3.png",
+                                "main_img2_4.png",
+                                "main_img2_5.png",
+                                "main_img2_6.png",
+                                "main_img2_7.png"
+                            ]
+                        },
+                        {
+                            list: [
+                                "main_img3_1.png",
+                                "main_img3_2.png",
+                                "main_img3_3.png",
+                                "main_img3_4.png",
+                                "main_img3_5.png",
+                                "main_img3_6.png",
+                                "main_img3_7.png"
+                            ]
+                        }
+                    ]
+                    window.onload = function () {
+                        rolling(rollingImgs)
+                    }
+                </script>
             </div>
             <div class="shadow"></div>
         </section>
@@ -79,7 +120,7 @@
                         </div>
                     </div>
                     <div class="shoes">
-                        <img src="./assets/img/shoes01.png" alt="cx foam" class='intro_shoes01'>
+                        <img src="./assets/img/shoes01.png" alt="cx foam" class='intro_shoes01 trans01'>
                         <img src="./assets/img/cxfoam.png" alt="탄력 있는 착화감으로 하루 종일 편안한 CX 폼 미드솔"
                             class='intro_shoes01_text'>
                     </div>
@@ -92,13 +133,16 @@
                 </div>
                 <div class="shoes_section03">
                     <div class="shoes">
-                        <img src="./assets/img/cxstretch.png" alt="cx stretch canvas" class='intro_shoes_text03'>
+                        <img src="./assets/img/cxstretch.png"
+                            alt="cx stretch canvas 발의 형태에 맞춰 쉽게 신고 벗을수 있도록 개발한 혁신적인 신소재"
+                            class='intro_shoes_text03 trans02'>
                         <img src="./assets/img/shoes04.png" alt="cx stretch canvas" class='intro_shoes_03'>
                     </div>
                 </div>
                 <div class="shoes_section04">
                     <div class="shoes">
-                        <img src="./assets/img/outsole.png" alt="new outsole design " class='intro_shoes_text04'>
+                        <img src="./assets/img/outsole.png" alt="new outsole design 최상의 유연성을 위한 러버 아웃솔"
+                            class='intro_shoes_text04'>
                         <img src="./assets/img/shoes05.png" alt="shoes outsole" class='intro_shoes_05'>
                         <img src="./assets/img/shoes06.png" alt="shoes outsole" class='intro_shoes_06'>
                     </div>

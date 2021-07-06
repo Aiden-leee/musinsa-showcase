@@ -132,18 +132,24 @@ strong {
   top: 138px;
   right: 82px;
   z-index: 30;
+  -webkit-animation: shake 1s ease-in-out infinite alternate;
+          animation: shake 1s ease-in-out infinite alternate;
 }
 
 .showcase > .main > .wrap .main_shoes .shoes02 {
   top: 838px;
   left: 88px;
   z-index: 30;
+  -webkit-animation: shake 1s ease-in-out .5s infinite alternate;
+          animation: shake 1s ease-in-out .5s infinite alternate;
 }
 
 .showcase > .main > .wrap .main_shoes .shoes03 {
   top: 940px;
   left: 482px;
   z-index: 30;
+  -webkit-animation: shake 1s ease-in-out .2s infinite alternate;
+          animation: shake 1s ease-in-out .2s infinite alternate;
 }
 
 .showcase > .main > .wrap .main_img .m_img01_1 {
@@ -208,13 +214,18 @@ strong {
           align-items: center;
 }
 
+.showcase > .intro1 > .wrap .intro1_text {
+  max-width: 395px;
+  overflow: hidden;
+}
+
 .showcase > .intro1 > .wrap .intro1_text .text {
   display: block;
 }
 
 .showcase > .intro1 > .wrap .intro1_text .text > img {
   position: relative;
-  display: block;
+  display: inline-block;
 }
 
 .showcase > .intro1 > .wrap .intro1_text .text.center_img {
@@ -224,6 +235,16 @@ strong {
 
 .showcase > .intro1 > .wrap .intro1_text .text.center_img > img {
   display: inline-block;
+}
+
+.showcase > .intro1 > .wrap .intro1_text .text:nth-child(1) {
+  -webkit-transform: translateX(385px);
+          transform: translateX(385px);
+}
+
+.showcase > .intro1 > .wrap .intro1_text .text:nth-child(3) {
+  -webkit-transform: translateX(-385px);
+          transform: translateX(-385px);
 }
 
 .showcase > .intro2 {
@@ -236,8 +257,12 @@ strong {
 }
 
 .showcase > .intro2 > .wrap .shoes_section01 .shoes_text {
+  position: relative;
   max-width: 500px;
   margin: 440px auto 0;
+  -webkit-animation: updown 1s ease infinite alternate;
+          animation: updown 1s ease infinite alternate;
+  z-index: 30;
 }
 
 .showcase > .intro2 > .wrap .shoes_section01 .shoes_text .text {
@@ -254,6 +279,7 @@ strong {
   position: relative;
   margin-top: 195px;
   height: calc(100% - 195px);
+  z-index: 20;
 }
 
 .showcase > .intro2 > .wrap .shoes_section01 .shoes .intro_shoes01 {
@@ -320,10 +346,56 @@ strong {
   right: 65px;
   top: -150px;
   z-index: 20;
+  -webkit-animation: shake 1s ease-in-out infinite alternate;
+          animation: shake 1s ease-in-out infinite alternate;
 }
 
 .showcase > .intro2 > .wrap .shoes_section04 .shoes .intro_shoes_06 {
   left: -290px;
   top: 70px;
   z-index: 10;
+}
+
+@-webkit-keyframes shake {
+  from {
+    -webkit-transform: rotate(2deg);
+            transform: rotate(2deg);
+  }
+  to {
+    -webkit-transform: rotate(-2deg);
+            transform: rotate(-2deg);
+  }
+}
+
+@keyframes shake {
+  from {
+    -webkit-transform: rotate(2deg);
+            transform: rotate(2deg);
+  }
+  to {
+    -webkit-transform: rotate(-2deg);
+            transform: rotate(-2deg);
+  }
+}
+
+@-webkit-keyframes updown {
+  form {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  to {
+    -webkit-transform: translateY(20px);
+            transform: translateY(20px);
+  }
+}
+
+@keyframes updown {
+  form {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  to {
+    -webkit-transform: translateY(20px);
+            transform: translateY(20px);
+  }
 }
