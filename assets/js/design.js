@@ -31,15 +31,12 @@ const rolling = function (data) {
     // ex) 초 간격으로 서버에 요청을 보내 데이터를 가져올때 서버가 과부하 상태라면 초 조절 가능
     // 이미지 전환 시 fadeIn 기능 
     let auto = setTimeout(function autoChange() {
-        count > 2 ? count = 0 : true;
+        count > 2 ? count = 0 : count;
         let list = data[count].list // 이미지 목록 
 
         // rolling img url 교체 
         rollingImg.forEach(function (obj, index) {
-            let result;
-            let name = obj.src.split("/")[5];
-            result = obj.src.replace(name, list[index]);
-            obj.src = result;
+            obj.src = "./assets/img/" + list[index];
             fadeIn(obj)
         })
         count++;
@@ -51,7 +48,10 @@ const fadeIn = function (target) {
     let opacity = 0;
     let auto = null;
     auto = setInterval(function () {
-        opacity > 1 ? clearInterval(auto) : true;
+        if (opacity > 0.9) {
+            clearInterval(auto);
+            return
+        }
         target.style.opacity = opacity += 0.1
     }, 60)
 }
