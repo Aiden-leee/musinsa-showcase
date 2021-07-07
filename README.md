@@ -7,4 +7,4 @@
 - 인터렉티브를 위해서 스크롤을 아래로 내릴 때 각각의 오브젝트에게 시간차 효과를 주어 동적인 느낌을 표현 하였습니다.
 
 
-![](https://i.imgur.com/F6CDx0e.jpg)
+<center><img src="https://i.imgur.com/F6CDx0e.jpg" width="50%"></center>
