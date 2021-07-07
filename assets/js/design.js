@@ -1,7 +1,7 @@
 // style 적용
 const translate = document.querySelectorAll('.translate');
 const intro2_translate = document.querySelectorAll('.intro2_translate');
-const shadow = document.querySelector(".shadow");
+const shadow = document.querySelector(".shadow");   // main 하단 그림자
 const opacity = document.querySelectorAll(".opacity");
 // section 
 const main = document.querySelector('.main');
@@ -10,7 +10,7 @@ const intro2 = document.querySelector('.intro2');
 // text
 const m_intro01 = document.querySelector(".m_intro01");
 const m_intro03 = document.querySelector(".m_intro03");
-// intro2 관련 trans 
+// intro2 관련 translate 
 const trans01 = document.querySelector('.trans01');
 const trans02 = document.querySelector('.trans02');
 // rolling img 
@@ -62,7 +62,6 @@ window.addEventListener('scroll', function () {
     let introY = intro1.getBoundingClientRect();
     let intro2Y = intro2.getBoundingClientRect();
 
-    // console.log(scroll)
     // translate 효과 적용
     translate.forEach(function (el) {
         let speed = el.dataset.speed;
@@ -78,7 +77,6 @@ window.addEventListener('scroll', function () {
 
     // intro 넘어갈때 
     if (scroll > main_height / 2) {
-        // console.log(scroll)
         let intro_translate = scroll / (intro1_height + introY.top) * 385 * 0.8;
         if (intro_translate >= 385) {
             m_intro01.style.transform = `translateX(-375px)`;
@@ -92,10 +90,9 @@ window.addEventListener('scroll', function () {
     // intro2 
     let margin_height = 635;    // intro2 의 margin-top
     if (scroll > main_height + intro1_height + margin_height) {
-        // intro section 에 scroll 값에 따라 ex) 0 ~ 1000 사이의 값으로 y 값 설정 / 속도
+        // intro section 에 scroll 값에 따라 ex) 0 ~ 1000 사이의 값으로 y 값 설정 * 속도
         let intro2_line = scroll / (main_height + intro1_height + intro2_height + margin_height + intro2Y.top);
-        trans01.style.transform = `translateY(${intro2_line * 1000 - 1000 * 0.5}px)`;
-        trans02.style.transform = `translateY(${intro2_line * 1000 - 1000 * 0.8}px)`;
+        trans01.style.transform = `translateY(${Math.floor(intro2_line * 1000 - 1000 * 0.5)}px)`;
+        trans02.style.transform = `translateY(${Math.floor(intro2_line * 1000 - 1000 * 0.8)}px)`;
     }
-
 })
